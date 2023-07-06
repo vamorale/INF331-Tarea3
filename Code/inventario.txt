@@ -1,0 +1,2 @@
+0,Minecraft,20000,30000,Aventura,Switch,29
+1,Doom,30000,40000,Acción,Xbox Series,20
