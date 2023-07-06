@@ -45,10 +45,14 @@ def buy():
     Platform = funciones.listOptions(platforms,"Escoge la plataforma del juego:\n")
     cant = input("Ingresa la cantidad a comprar: ")
     print(genres[int(Genre)-1],platforms[int(Platform)-1])
-    games[id] = [title,Bprice,Sprice,genres[int(Genre)-1],platforms[int(Platform)-1],cant]
-    purchases.append([id,title,Bprice,cant])
-    print("Juego registrado en el inventario exitosamente")
-
+    datos=[title,Bprice,Sprice,genres[int(Genre)-1],platforms[int(Platform)-1],cant]
+    validacion=funciones.validarJuego(datos)
+    if validacion:
+        games[id] = datos
+        purchases.append([id,title,Bprice,cant])
+        print("Juego registrado en el inventario exitosamente")
+    else:
+        print("No se pudo registrar el juego")
 # Ventas del admin y compras del cliente
 
 def sale():
@@ -66,7 +70,6 @@ def sale():
         cant = int(input("Ingresa la cantidad: "))
         if cant>int(games[int(game)-1][-1]) or cant<=0:
             print("Esa cantidad no es válida")
-            print(cant)
         else:
             games[int(game)-1][-1] = str(int(games[int(game)-1][-1]) - cant)
             print("Juego comprado exitosamente.")
