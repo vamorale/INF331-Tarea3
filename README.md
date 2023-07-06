@@ -15,8 +15,8 @@ Víctor Morales Alanis
 
 - Para correr las pruebas se debe ejecutar el siguiente comando:
 
-py -m unittest pruebas.py o python -m unittest pruebas.py
+  <code>py -m unittest pruebas.py</code> o <code>python -m unittest pruebas.py</code>
 
 - Para ejecutar el simulador se utiliza el siguiente comando:
 
-py main.py o python main.py
+  <code>py main.py</code> o <code>python main.py</code>
